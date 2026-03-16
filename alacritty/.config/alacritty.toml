@@ -1,0 +1,13 @@
+[terminal]
+shell="/bin/fish"
+
+[cursor]
+style={shape="Beam",blinking="Always"}
+unfocused_hollow=false
+
+[font]
+size=15
+
+[window]
+padding={x=5,y=5}
+opacity= 0.85

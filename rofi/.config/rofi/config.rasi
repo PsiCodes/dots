@@ -1,0 +1,12 @@
+
+
+configuration {
+	show-icons: true;
+}
+
+* {
+    background:                  rgba( 30, 30, 30, 100 % );
+    selected-active-background:  rgba(30,30,30,100%);
+    alternate-normal-background: rgba(40,40,40,100 %);
+    foreground:                  rgba( 200, 200, 200, 100 % );
+}

@@ -1,0 +1,85 @@
+{
+    "layer": "top",
+    "position": "bottom",
+    "height": 24,
+
+    "spacing": 4,
+    "modules-left": [
+        "hyprland/workspaces",
+	"ext/workspaces"
+    ],
+    "modules-center": [
+	"hyprland/workspaces#windows",
+	"dwl/window",
+        "hyprland/window"
+     ],
+    "modules-right": [
+        "pulseaudio",
+        "battery",
+        "clock",
+        "tray"
+    ],
+
+    "dwl/window" : {
+	"icon" : true,
+	"icon-size" : 20
+    },
+
+     "ext/workspaces": {
+    "format": "{icon}",
+    "ignore-hidden": true,
+    "on-click": "activate",
+    "on-click-right": "deactivate",
+    "sort-by-id": true
+  },
+
+
+
+    "dwl/tags" : {
+
+    },
+
+    "hyprland/workspaces": {
+        "persistent-workspaces": {
+            "*": 3
+        }
+    },
+     "hyprland/workspaces#windows" : {
+          "active-only" : true,
+          "format" : "{windows}",
+          "workspace-taskbar" : {
+            "enable" : true,
+	    "icon-size" : 20,
+            "update-active-window" : true,
+            "format" : "{icon}"
+	}
+     },
+    "tray": {
+        "spacing": 10
+    },
+
+    "clock": {
+        "format": "{:%H:%M} ",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><big>{calendar}</big></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+
+    "battery": {
+        "format": "{capacity}% 󰁹",
+        "format-warning": "{capacity}% 󰁺",
+        "format-critical": "{capacity}% 󰂃",
+        "states": {
+            "warning": 20,
+            "critical": 15
+        },
+        "events": {
+            "on-discharging-warning": "notify-send -u critical 'Low Battery'"
+        }
+    },
+
+    "pulseaudio": {
+        "format": "{volume}%  ",
+        "format-muted": " muted",
+        "on-click": "pavucontrol"
+    }
+}

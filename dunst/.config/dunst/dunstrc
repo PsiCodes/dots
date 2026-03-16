@@ -1,0 +1,13 @@
+[global]
+    monitor = 0
+    font = JetBrainsMono Nerd Font Regular 12
+    offset = (10,10)
+    icon_theme = Papirus
+    enable_recursive_icon_lookup = true
+    stack_duplicate = true
+    background = "#403a3aCC"
+    foreground = "#ebdbb2"
+
+[espeak]
+    summary = "*"
+    script = /home/pranjal/.config/dunst/alert

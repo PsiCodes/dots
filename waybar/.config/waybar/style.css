@@ -1,0 +1,62 @@
+* {
+    font-family: JetBrains Mono Nerd Font;
+    min-height: 0;
+    font-size: 12px;
+}
+
+window#waybar {
+    background-color : rgba(40,40,40,0.75)
+}
+
+button 
+{
+    border-radius: 0px;
+    padding : 5px
+}
+
+#tags button:not(.occupied)
+{
+	color : rgba(120,120,120,1);
+}
+
+
+#tags button.focused,
+#workspaces button.active
+{
+    background-color: rgba(255,255,255,0.1);
+    box-shadow: inset 0 -1px #ffffff;
+}
+
+#workspaces.windows button {
+    box-shadow : none;
+    padding: 0 6px;
+    background: transparent;
+    border: none;
+}
+
+@keyframes battery-blink {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.35;
+    }
+}
+
+#battery.critical:not(.charging) {
+    color: #FF3B3B;   /* brighter red */
+
+    animation-name: battery-blink;
+    animation-duration: 0.7s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#clock,
+#pulseaudio,
+#battery
+{
+    padding: 0 2px;
+    font-size: 13px;
+}
