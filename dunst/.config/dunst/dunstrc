@@ -10,4 +10,4 @@
 
 [espeak]
     summary = "*"
-    script = /home/pranjal/.config/dunst/alert
+    script = $HOME/.config/dunst/alert

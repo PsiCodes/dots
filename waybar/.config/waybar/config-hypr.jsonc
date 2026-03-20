@@ -5,10 +5,11 @@
 
     "spacing": 4,
     "modules-left": [
-        "dwl/tags"
+        "hyprland/workspaces"
     ],
     "modules-center": [
-	    "dwl/window"
+	    "hyprland/workspaces#windows",
+        "hyprland/window"
      ],
     "modules-right": [
         "pulseaudio",
@@ -17,11 +18,21 @@
         "tray"
     ],
 
-    "dwl/window" : {
-	"icon" : true,
-	"icon-size" : 20
+    "hyprland/workspaces": {
+        "persistent-workspaces": {
+            "*": 3
+        }
     },
-
+     "hyprland/workspaces#windows" : {
+          "active-only" : true,
+          "format" : "{windows}",
+          "workspace-taskbar" : {
+            "enable" : true,
+	    "icon-size" : 20,
+            "update-active-window" : true,
+            "format" : "{icon}"
+	}
+     },
     "tray": {
         "spacing": 10
     },
