@@ -53,6 +53,7 @@ button
     animation-direction: alternate;
 }
 
+#tray,
 #clock,
 #pulseaudio,
 #battery
